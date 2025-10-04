@@ -111,10 +111,15 @@ For Windows users, use the provided batch files:
 
 ### 🎯 Running the Application
 
+### Local Development
 1. **Open your browser** and navigate to `http://localhost:3000`
 2. **The application will automatically connect** to the backend server
 3. **Test real-time features** by opening multiple browser tabs/windows
 4. **Start collaborating** - create tasks, drag and drop, and see real-time updates!
+
+### Live Demo
+- **Backend API**: https://task-board-d2m0.onrender.com
+- **Frontend**: [Your deployed frontend URL will be here after deployment]
 
 ### Manual Setup
 
@@ -390,16 +395,16 @@ npx vercel --prod
 npx netlify deploy --prod --dir=build
 ```
 
-#### **Backend (Railway/Heroku)**
+#### **Backend (Render)**
 ```bash
-# Add production dependencies
-npm install --production
+# Backend deployed at:
+# https://task-board-d2m0.onrender.com
 
-# Deploy to Railway
-railway deploy
-
-# Or deploy to Heroku
-git push heroku main
+# For your own deployment:
+# 1. Connect your GitHub repository to Render
+# 2. Set build command: npm install
+# 3. Set start command: npm start
+# 4. Add environment variables in Render dashboard
 ```
 
 ### Environment Variables

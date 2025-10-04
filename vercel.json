@@ -16,6 +16,6 @@
     }
   ],
   "env": {
-    "REACT_APP_SERVER_URL": "https://your-backend-url.herokuapp.com"
+    "REACT_APP_SERVER_URL": "https://task-board-d2m0.onrender.com"
   }
 }
