@@ -13,7 +13,7 @@ start "Frontend Client" cmd /k "cd client && npm start"
 
 echo.
 echo Both servers are starting...
-echo Backend: http://localhost:5000
+echo Backend: https://task-board-d2m0.onrender.com
 echo Frontend: http://localhost:3000
 echo.
 echo Press any key to close this window...

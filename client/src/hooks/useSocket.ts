@@ -10,7 +10,7 @@ export const useSocket = () => {
   const lastMoveRef = useRef<number>(0);
 
   useEffect(() => {
-    const serverUrl = process.env.REACT_APP_SERVER_URL || 'http://localhost:5000';
+    const serverUrl = process.env.REACT_APP_SERVER_URL || 'https://task-board-d2m0.onrender.com';
     const newSocket = io(serverUrl);
     setSocket(newSocket);
 
