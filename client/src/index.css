@@ -1,0 +1,34 @@
+/* Global styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Simple, clean drag and drop styles */
+[data-rbd-draggable-id] {
+  z-index: 1;
+}
+
+[data-rbd-draggable-id][style*="transform"] {
+  z-index: 9999;
+  opacity: 0.8;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Basic cursor styles */
+[data-rbd-drag-handle-draggable-id] {
+  cursor: grab;
+}
+
+[data-rbd-drag-handle-draggable-id]:active {
+  cursor: grabbing;
+}
