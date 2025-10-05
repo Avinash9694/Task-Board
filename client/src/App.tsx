@@ -1,6 +1,6 @@
 import React from 'react';
 import { DragDropContext, DropResult } from 'react-beautiful-dnd';
-import { AppContainer, Header, Title } from './styles/AppStyles';
+import { AppContainer, Header, Title, UserPresenceWrapper } from './styles/AppStyles';
 import TaskBoard from './components/TaskBoard';
 import UserPresence from './components/UserPresence';
 import { useSocket } from './hooks/useSocket';
@@ -144,7 +144,9 @@ const App: React.FC = () => {
     <AppContainer>
       <Header>
         <Title>Collaborative Task Board</Title>
-        <UserPresence users={users} />
+        <UserPresenceWrapper>
+          <UserPresence users={users} />
+        </UserPresenceWrapper>
       </Header>
 
       <DragDropContext onDragEnd={handleDragEnd}>
