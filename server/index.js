@@ -17,17 +17,31 @@ const server = http.createServer(app);
 
 // Environment variables with defaults
 const PORT = process.env.PORT || 5000;
-const CORS_ORIGIN = process.env.CORS_ORIGIN || "http://localhost:3000";
+const CORS_ORIGIN = process.env.CORS_ORIGIN || "*";
 
 const io = socketIo(server, {
   cors: {
-    origin: CORS_ORIGIN,
-    methods: ["GET", "POST"]
+    origin: ["https://task-board-seven-theta.vercel.app", "http://localhost:3000"],
+    methods: ["GET", "POST"],
+    credentials: true
   }
 });
 
-app.use(cors());
+app.use(cors({
+  origin: ["https://task-board-seven-theta.vercel.app", "http://localhost:3000"],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
 app.use(express.json());
+
+// Root route
+app.get('/', (req, res) => {
+  res.json({ 
+    message: 'Task Board API Server', 
+    status: 'running',
+    socketIO: true 
+  });
+});
 
 // Serve favicon.ico to prevent proxy errors
 app.get('/favicon.ico', (req, res) => {

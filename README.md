@@ -119,7 +119,7 @@ For Windows users, use the provided batch files:
 
 ### Live Demo
 - **Backend API**: https://task-board-d2m0.onrender.com
-- **Frontend**: [Your deployed frontend URL will be here after deployment]
+- **Frontend**:  https://task-board-seven-theta.vercel.app/
 
 ### Manual Setup
 
