@@ -1,5 +1,9 @@
 # 🚀 Real-time Collaborative Task Board
 
+**Live demo:** https://avinash9694.github.io/Task-Board/ (open it in two tabs to see changes sync live)
+
+![Task board with To Do, In Progress and Done columns](docs/screenshot.png)
+
 A feature-rich, real-time collaborative task board similar to Trello, built with React, TypeScript, Socket.IO, and SQLite. This project demonstrates advanced React skills, real-time data synchronization, and modern web development practices.
 
 ## ✨ Features
@@ -119,7 +123,7 @@ For Windows users, use the provided batch files:
 
 ### Live Demo
 - **Backend API**: https://task-board-d2m0.onrender.com
-- **Frontend**:  https://task-board-seven-theta.vercel.app/
+- **Frontend**: https://avinash9694.github.io/Task-Board/
 
 ### Manual Setup
 
