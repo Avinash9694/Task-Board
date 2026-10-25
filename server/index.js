@@ -17,18 +17,23 @@ const server = http.createServer(app);
 
 // Environment variables with defaults
 const PORT = process.env.PORT || 5000;
-const CORS_ORIGIN = process.env.CORS_ORIGIN || "*";
+const ALLOWED_ORIGINS = [
+  "https://avinash9694.github.io",
+  "https://task-board-seven-theta.vercel.app",
+  "http://localhost:3000",
+  ...(process.env.CORS_ORIGIN ? process.env.CORS_ORIGIN.split(",").map((o) => o.trim()) : []),
+];
 
 const io = socketIo(server, {
   cors: {
-    origin: ["https://task-board-seven-theta.vercel.app", "http://localhost:3000"],
+    origin: ALLOWED_ORIGINS,
     methods: ["GET", "POST"],
     credentials: true
   }
 });
 
 app.use(cors({
-  origin: ["https://task-board-seven-theta.vercel.app", "http://localhost:3000"],
+  origin: ALLOWED_ORIGINS,
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
