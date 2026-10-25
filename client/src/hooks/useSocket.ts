@@ -11,7 +11,8 @@ export const useSocket = () => {
 
   useEffect(() => {
     const serverUrl = process.env.REACT_APP_SERVER_URL || 'https://task-board-d2m0.onrender.com';
-    const newSocket = io(serverUrl);
+    // WebSocket first: it skips the long-polling handshake, which matters when the server is waking up.
+    const newSocket = io(serverUrl, { transports: ['websocket', 'polling'] });
     setSocket(newSocket);
 
     // Load initial board data

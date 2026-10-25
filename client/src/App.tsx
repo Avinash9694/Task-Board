@@ -128,13 +128,21 @@ const App: React.FC = () => {
           style={{
             display: 'flex',
             justifyContent: 'center',
+            flexDirection: 'column',
             alignItems: 'center',
+            gap: '0.75rem',
             height: '100vh',
+            padding: '0 1.5rem',
+            textAlign: 'center',
             color: 'white',
             fontSize: '1.5rem'
           }}
+          role="status"
         >
           Loading your collaborative task board...
+          <span style={{ fontSize: '1rem', opacity: 0.85 }}>
+            The free server sleeps when nobody is using it, so the first load can take up to a minute.
+          </span>
         </div>
       </AppContainer>
     );
